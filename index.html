@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suar Studio | Video Editing & Web Design</title>
+    <meta
+      name="description"
+      content="Suar Studio crea contenido de video de alto impacto y experiencias web enfocadas en conversiones para marcas que quieren destacar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <span>Suar Studio</span>
+        </div>
+        <nav class="nav">
+          <a href="#services">Servicios</a>
+          <a href="#work">Portafolio</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+        <a class="nav-cta" href="https://wa.me/5538766414?text=%C2%A1Hola%21%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20tus%20servicios." target="_blank" rel="noreferrer">Agenda una llamada</a>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Edición de video • diseño web • crecimiento de marca</p>
+            <h1>Creamos historias impactantes que mueven a la gente y hacen crecer marcas.</h1>
+            <p class="subhead">
+              Suar Studio ayuda a las empresas a convertir la atención en acción con ediciones de video
+              cinematográficas, diseño estratégico y sitios web de alto rendimiento que se sienten premium.
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-btn" href="https://wa.me/5538766414?text=%C2%A1Hola%21%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20tus%20servicios." target="_blank" rel="noreferrer">
+                <span class="icon">✦</span>
+                Escríbenos por WhatsApp
+              </a>
+              <a class="secondary-btn" href="#services">Explorar servicios</a>
+            </div>
+
+            <ul class="stats" aria-label="Estadísticas clave">
+              <li><strong>120+</strong><span>Proyectos lanzados</span></li>
+              <li><strong>4.9/5</strong><span>Calificación promedio</span></li>
+              <li><strong>7+ años</strong><span>Experiencia creativa</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Presentación de agencia creativa">
+            <div class="visual-card card-main">
+              <div class="card-header">
+                <span class="pulse"></span>
+                <span>Reel de campaña</span>
+              </div>
+              <div class="reel-preview">
+                <div class="play-badge">▶</div>
+              </div>
+              <div class="card-meta">
+                <span>Lanzamiento de marca</span>
+                <strong>+240% engagement</strong>
+              </div>
+            </div>
+
+            <div class="floating-panel panel-top">
+              <span class="mini-label">Diseño web</span>
+              <strong>UI orientada a conversión</strong>
+            </div>
+
+            <div class="floating-panel panel-bottom">
+              <span class="mini-label">Edición de video</span>
+              <strong>2.4x tiempo de visualización</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="services">
+          <div class="section-heading">
+            <p class="eyebrow">Qué hacemos</p>
+            <h2>Servicios creativos diseñados para elevar tu marca.</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon">01</div>
+              <h3>Edición de video</h3>
+              <p>
+                Ediciones premium para anuncios, reels, promociones y historias de marca pensadas para captar atención al instante.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">02</div>
+              <h3>Diseño web</h3>
+              <p>
+                Páginas modernas y sitios enfocados en conversiones para que tu negocio luzca premium.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">03</div>
+              <h3>Identidad de marca</h3>
+              <p>
+                Sistemas visuales y marcos de mensaje que hacen que tu marca se sienta clara, memorable y confiable.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">04</div>
+              <h3>Contenido social</h3>
+              <p>
+                Plantillas y activos de contenido breve que rompen el scroll y están diseñados para crecer de forma constante.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="video-check" class="video-check" aria-labelledby="video-check-title">
+          <div class="section-heading">
+            <p class="eyebrow">Validador de entrega</p>
+            <h2 id="video-check-title">Comprueba tu video antes de procesarlo.</h2>
+            <p class="section-intro">Aceptamos archivos MP4 de hasta 500 MB. Si el procesamiento falla, puedes intentarlo de nuevo sin volver a seleccionar el archivo.</p>
+          </div>
+
+          <div class="upload-panel">
+            <label class="drop-zone" for="video-file">
+              <span class="upload-icon" aria-hidden="true">↑</span>
+              <strong>Selecciona un video MP4</strong>
+              <span>Formato requerido: MP4 · Tamaño máximo: 500 MB</span>
+              <input id="video-file" type="file" accept="video/mp4,.mp4" />
+            </label>
+            <div class="processing-status" aria-live="polite">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="file-status">Aún no has seleccionado un archivo.</span>
+            </div>
+            <button class="retry-btn" id="retry-processing" type="button" disabled>
+              <span aria-hidden="true">↻</span>
+              Intentar procesar de nuevo
+            </button>
+          </div>
+        </section>
+
+        <section id="work" class="portfolio">
+          <div class="section-heading">
+            <p class="eyebrow">Portafolio</p>
+            <h2>Proyectos que convierten ideas en experiencias memorables.</h2>
+          </div>
+
+          <div class="portfolio-layout">
+            <div class="project-gallery">
+              <article class="project-card project-card-wide">
+                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85" alt="Diseño de identidad visual sobre una mesa de trabajo" loading="lazy" />
+                <div class="project-info">
+                  <span>Identidad visual</span>
+                  <strong>Marca con presencia</strong>
+                </div>
+              </article>
+              <article class="project-card">
+                <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=900&q=85" alt="Presentación de estrategia de marca en una pantalla" loading="lazy" />
+                <div class="project-info">
+                  <span>Estrategia digital</span>
+                  <strong>De la idea al impacto</strong>
+                </div>
+              </article>
+              <article class="project-card">
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=85" alt="Persona grabando contenido para redes sociales" loading="lazy" />
+                <div class="project-info">
+                  <span>Contenido social</span>
+                  <strong>Historias que conectan</strong>
+                </div>
+              </article>
+            </div>
+
+            <div class="reel-showcase">
+              <div class="reel-heading">
+                <span class="mini-label">Reel principal</span>
+                <strong>Una mirada al proceso creativo</strong>
+              </div>
+              <iframe
+                src="https://www.youtube.com/embed/sMSxypsjXa8"
+                title="Reel principal de Suar Studio"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <div class="brand-mark">S</div>
+          <div>
+            <strong>Suar Studio</strong>
+            <span>Creando marcas que dejan huella.</span>
+          </div>
+        </div>
+
+        <div class="social-links" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/eduar_el_oficial/?__pwa=1" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.tiktok.com/@eduareloficial?_r=1&_t=ZS-9A0Hj3JTdaO" target="_blank" rel="noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4c.4 2.4 1.8 3.8 4 4v3.2c-1.5 0-2.8-.4-4-1.2V16a5 5 0 1 1-4.3-5v3.3a1.8 1.8 0 1 0 1.3 1.7V4H15Z"></path></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="https://youtube.com/@eduardosuarez-b3s?si=Q7kMBsC9iXozRu1s" target="_blank" rel="noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8.2a2.8 2.8 0 0 0-2-2C17.2 5.7 12 5.7 12 5.7s-5.2 0-7 .5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2.5 12 29 29 0 0 0 3 15.8a2.8 2.8 0 0 0 2 2c1.8.5 7 .5 7 .5s5.2 0 7-.5a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .5-3.8 29 29 0 0 0-.5-3.8Z"></path><path class="icon-fill" d="m10 15.2 4.5-3.2L10 8.8v6.4Z"></path></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.facebook.com/share/1FVLsjbs2D/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5c-.5-.1-1.7-.2-3.1-.2-3.1 0-5.2 1.9-5.2 5.4V12H5.3v3.9h3.4V22H13v-6.1h3.4L17 12h-4V10c0-1.1.3-2 1-2Z"></path></svg>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const videoInput = document.querySelector("#video-file");
+      const fileStatus = document.querySelector("#file-status");
+      const retryButton = document.querySelector("#retry-processing");
+      const dropZone = document.querySelector(".drop-zone");
+      const maxFileSize = 500 * 1024 * 1024;
+      let selectedFile = null;
+
+      function validateVideo(file) {
+        if (!file) {
+          return "Selecciona un archivo para comenzar.";
+        }
+        if (file.size === 0) {
+          return "El archivo está vacío. Elige otro video.";
+        }
+        if (file.size > maxFileSize) {
+          return "El video supera el límite de 500 MB.";
+        }
+        if (file.type !== "video/mp4" && !file.name.toLowerCase().endsWith(".mp4")) {
+          return "Formato no compatible. Solo se aceptan archivos MP4.";
+        }
+        return "valid";
+      }
+
+      function setStatus(message, state) {
+        fileStatus.textContent = message;
+        dropZone.dataset.state = state;
+      }
+
+      function processVideo() {
+        const validation = validateVideo(selectedFile);
+        if (validation !== "valid") {
+          setStatus(validation, "error");
+          retryButton.disabled = true;
+          return;
+        }
+
+        retryButton.disabled = true;
+        setStatus("Procesando el video...", "processing");
+        window.setTimeout(() => {
+          setStatus(`Archivo listo para la plataforma: ${selectedFile.name}`, "success");
+          retryButton.disabled = false;
+        }, 900);
+      }
+
+      videoInput.addEventListener("change", () => {
+        selectedFile = videoInput.files[0] || null;
+        const validation = validateVideo(selectedFile);
+        if (validation !== "valid") {
+          setStatus(validation, "error");
+          retryButton.disabled = true;
+          return;
+        }
+        setStatus(`${selectedFile.name} cumple los requisitos.`, "success");
+        retryButton.disabled = false;
+      });
+
+      retryButton.addEventListener("click", processVideo);
+    </script>
+  </body>
+</html>
