@@ -1,290 +1,626 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suar Studio | Video Editing & Web Design</title>
-    <meta
-      name="description"
-      content="Suar Studio crea contenido de video de alto impacto y experiencias web enfocadas en conversiones para marcas que quieren destacar."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="brand">
-          <div class="brand-mark">S</div>
-          <span>Suar Studio</span>
-        </div>
-        <nav class="nav">
-          <a href="#services">Servicios</a>
-          <a href="#work">Portafolio</a>
-          <a href="#contact">Contacto</a>
-        </nav>
-        <a class="nav-cta" href="https://wa.me/5538766414?text=%C2%A1Hola%21%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20tus%20servicios." target="_blank" rel="noreferrer">Agenda una llamada</a>
-      </header>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agave y Uvas — Todo México en una botella | Mezcales y Vinos Mexicanos</title>
+<meta name="description" content="Mezcales artesanales y vinos mexicanos seleccionados. Envíos a toda la República. Visítanos en Narvarte, CDMX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --negro:#141210;
+  --agave:#6E8B3D;
+  --agave-osc:#55702b;
+  --dorado:#C9A24B;
+  --crema:#FAF7F0;
+  --gris:#8a8478;
+  --amarillo:#FFD100;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--crema);color:#2b2823;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+h1,h2,.logo-serif{font-family:'Playfair Display',serif;}
+button{font-family:'Inter',sans-serif;}
 
-      <main>
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Edición de video • diseño web • crecimiento de marca</p>
-            <h1>Creamos historias impactantes que mueven a la gente y hacen crecer marcas.</h1>
-            <p class="subhead">
-              Suar Studio ayuda a las empresas a convertir la atención en acción con ediciones de video
-              cinematográficas, diseño estratégico y sitios web de alto rendimiento que se sienten premium.
-            </p>
+.top-bar{background:var(--negro);color:#e8e2d5;text-align:center;padding:9px 16px;font-size:.8rem;letter-spacing:.4px;}
+.top-bar strong{color:var(--dorado);}
 
-            <div class="hero-actions">
-              <a class="primary-btn" href="https://wa.me/5538766414?text=%C2%A1Hola%21%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20tus%20servicios." target="_blank" rel="noreferrer">
-                <span class="icon">✦</span>
-                Escríbenos por WhatsApp
-              </a>
-              <a class="secondary-btn" href="#services">Explorar servicios</a>
-            </div>
+.header{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:30px;padding:18px 5%;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #e8e1d3;}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--negro);letter-spacing:.5px;white-space:nowrap;}
+.logo span{color:var(--agave);}
+.search-bar{flex-grow:1;display:flex;max-width:560px;}
+.search-bar input{width:100%;padding:11px 16px;border:1px solid #ddd5c5;border-right:none;border-radius:30px 0 0 30px;font-size:.9rem;background:var(--crema);outline:none;transition:border-color .2s;}
+.search-bar input:focus{border-color:var(--agave);}
+.search-bar button{padding:11px 22px;background:var(--negro);color:#fff;border:none;border-radius:0 30px 30px 0;cursor:pointer;font-size:.9rem;transition:background .2s;}
+.search-bar button:hover{background:var(--agave);}
+.user-actions{display:flex;gap:24px;font-size:.85rem;font-weight:600;margin-left:auto;align-items:center;}
+.user-actions a{display:flex;align-items:center;gap:6px;color:#4a453d;transition:color .2s;white-space:nowrap;cursor:pointer;}
+.user-actions a:hover{color:var(--agave);}
+.cart-badge{background:var(--dorado);color:var(--negro);border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;margin-left:4px;transition:transform .2s;}
 
-            <ul class="stats" aria-label="Estadísticas clave">
-              <li><strong>120+</strong><span>Proyectos lanzados</span></li>
-              <li><strong>4.9/5</strong><span>Calificación promedio</span></li>
-              <li><strong>7+ años</strong><span>Experiencia creativa</span></li>
-            </ul>
-          </div>
+.navbar{background:var(--negro);display:flex;justify-content:center;flex-wrap:wrap;position:sticky;top:67px;z-index:99;}
+.navbar a{color:#d8d2c4;margin:0 6px;padding:14px 18px;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;position:relative;transition:color .2s;}
+.navbar a::after{content:'';position:absolute;bottom:8px;left:18px;right:18px;height:2px;background:var(--dorado);transform:scaleX(0);transition:transform .25s;transform-origin:left;}
+.navbar a:hover{color:var(--dorado);}
+.navbar a:hover::after{transform:scaleX(1);}
 
-          <div class="hero-visual" aria-label="Presentación de agencia creativa">
-            <div class="visual-card card-main">
-              <div class="card-header">
-                <span class="pulse"></span>
-                <span>Reel de campaña</span>
-              </div>
-              <div class="reel-preview">
-                <div class="play-badge">▶</div>
-              </div>
-              <div class="card-meta">
-                <span>Lanzamiento de marca</span>
-                <strong>+240% engagement</strong>
-              </div>
-            </div>
+.hero{background:linear-gradient(120deg,#141210 0%,#2a261c 55%,#3a4a22 100%);color:#fff;padding:70px 5%;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;}
+.hero .badge{display:inline-block;background:rgba(201,162,75,.15);border:1px solid var(--dorado);color:var(--dorado);font-size:.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;margin-bottom:18px;}
+.hero h1 em{color:var(--dorado);font-style:normal;}
+.hero p{color:#cfc8b8;font-size:1.05rem;line-height:1.7;max-width:520px;margin-bottom:28px;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:30px;font-weight:700;font-size:.9rem;cursor:pointer;border:none;transition:transform .2s, box-shadow .2s, background .2s;}
+.btn:active{transform:scale(.97);}
+.btn-amarillo{background:var(--amarillo);color:var(--negro);}
+.btn-amarillo:hover{background:#f0c400;box-shadow:0 8px 20px rgba(255,209,0,.3);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);}
+.btn-outline:hover{border-color:#fff;}
+.hero-bottle{justify-self:center;width:150px;height:300px;border-radius:12px 12px 8px 8px;background:linear-gradient(105deg,#5c3b1e,#8a5a2b 30%,#c99a5b 50%,#8a5a2b 70%,#5c3b1e);box-shadow:0 30px 60px rgba(0,0,0,.45), inset 0 0 40px rgba(0,0,0,.3);position:relative;animation:float 5s ease-in-out infinite;}
+.hero-bottle::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:44px;height:62px;border-radius:8px 8px 4px 4px;background:linear-gradient(105deg,#5c3b1e,#8a5a2b,#5c3b1e);}
+.hero-bottle::after{content:'AGAVE Y UVAS';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;letter-spacing:2px;color:#f5e6c8;line-height:1.5;}
+@keyframes float{0%,100%{transform:translateY(0) rotate(2deg);}50%{transform:translateY(-16px) rotate(-2deg);}}
 
-            <div class="floating-panel panel-top">
-              <span class="mini-label">Diseño web</span>
-              <strong>UI orientada a conversión</strong>
-            </div>
+.trust{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;background:#fff;padding:26px 5%;border-bottom:1px solid #ece5d8;}
+.trust div{display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;color:#5a5347;}
+.trust span{font-size:1.4rem;}
 
-            <div class="floating-panel panel-bottom">
-              <span class="mini-label">Edición de video</span>
-              <strong>2.4x tiempo de visualización</strong>
-            </div>
-          </div>
-        </section>
+.container{display:flex;padding:50px 5%;gap:44px;max-width:1400px;margin:0 auto;}
 
-        <section id="services" class="services">
-          <div class="section-heading">
-            <p class="eyebrow">Qué hacemos</p>
-            <h2>Servicios creativos diseñados para elevar tu marca.</h2>
-          </div>
+.sidebar{width:250px;flex-shrink:0;align-self:flex-start;position:sticky;top:150px;}
+.sidebar h3{font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--agave);}
+.filter-group{margin-bottom:26px;}
+.filter-group h4{font-size:.95rem;margin-bottom:12px;color:var(--negro);text-transform:uppercase;letter-spacing:.5px;}
+.filter-group label{display:flex;align-items:center;font-size:.88rem;margin-bottom:9px;cursor:pointer;color:#6b6558;transition:color .2s;}
+.filter-group label:hover{color:var(--agave);}
+.filter-group input{accent-color:var(--agave);margin-right:10px;}
+.count{color:var(--gris);font-size:.78rem;margin-left:auto;background:#efe9dc;border-radius:10px;padding:1px 8px;}
 
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="service-icon">01</div>
-              <h3>Edición de video</h3>
-              <p>
-                Ediciones premium para anuncios, reels, promociones y historias de marca pensadas para captar atención al instante.
-              </p>
-            </article>
+.product-list{flex-grow:1;min-width:0;}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:8px;}
+.section-head h2{font-size:1.8rem;}
+.breadcrumb{font-size:.85rem;color:var(--gris);margin-bottom:26px;}
+.breadcrumb a:hover{color:var(--agave);}
+.sort select{padding:8px 12px;border:1px solid #ddd5c5;border-radius:6px;background:#fff;font-size:.85rem;cursor:pointer;}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px;margin-top:20px;}
+.product-card{background:#fff;border:1px solid #ece5d8;border-radius:14px;padding:26px 22px;text-align:center;position:relative;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column;}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(30,25,15,.12);border-color:#d8cfba;}
+.product-img{width:76px;height:190px;margin:6px auto 18px;border-radius:6px 6px 5px 5px;background:linear-gradient(105deg,#6b451f,#96642f 35%,#d3a86a 50%,#96642f 65%,#6b451f);position:relative;box-shadow:0 8px 16px rgba(0,0,0,.12);}
+.product-img::before{content:'';position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:26px;height:30px;border-radius:5px 5px 3px 3px;background:linear-gradient(105deg,#6b451f,#96642f,#6b451f);}
+.product-card.wide .product-img{width:130px;height:110px;background:linear-gradient(105deg,#3a2f22,#5c4a32 40%,#8a7350 50%,#5c4a32 60%,#3a2f22);}
+.product-card.wide .product-img::before{display:none;}
+.product-title{font-size:1.02rem;font-weight:700;margin-bottom:7px;color:var(--negro);min-height:44px;display:flex;align-items:center;justify-content:center;}
+.product-origin{font-size:.82rem;color:var(--gris);margin-bottom:14px;line-height:1.5;min-height:38px;}
+.stars{color:var(--dorado);font-size:.85rem;margin-bottom:10px;letter-spacing:2px;}
+.stars small{color:var(--gris);letter-spacing:0;}
+.product-price{font-size:1.35rem;font-weight:700;color:var(--negro);margin-bottom:16px;margin-top:auto;}
+.btn-add{background:var(--negro);color:#fff;border:none;padding:13px 18px;width:100%;font-weight:700;border-radius:30px;cursor:pointer;font-size:.85rem;letter-spacing:.5px;transition:background .2s,transform .15s;}
+.btn-add:hover{background:var(--agave);}
+.btn-add:active{transform:scale(.97);}
+.tag{position:absolute;top:16px;left:16px;font-size:.68rem;padding:5px 10px;font-weight:700;border-radius:20px;text-transform:uppercase;letter-spacing:1px;z-index:2;}
+.tag-rec{background:var(--dorado);color:var(--negro);}
+.tag-new{background:var(--agave);color:#fff;}
+.tag-off{background:#b33a3a;color:#fff;}
 
-            <article class="service-card">
-              <div class="service-icon">02</div>
-              <h3>Diseño web</h3>
-              <p>
-                Páginas modernas y sitios enfocados en conversiones para que tu negocio luzca premium.
-              </p>
-            </article>
+/* ── Sección Ubicación / Mapa ── */
+.location{background:#fff;border-top:1px solid #ece5d8;padding:60px 5%;}
+.location-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:stretch;}
+.location-info h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px;}
+.location-info h2 em{color:var(--agave);font-style:normal;}
+.location-info>p{color:#6b6558;font-size:.95rem;line-height:1.7;margin-bottom:26px;}
+.loc-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;}
+.loc-icon{width:46px;height:46px;flex-shrink:0;border-radius:12px;background:var(--crema);border:1px solid #ece5d8;display:flex;align-items:center;justify-content:center;font-size:1.25rem;}
+.loc-item h4{font-size:.95rem;margin-bottom:3px;}
+.loc-item p{font-size:.88rem;color:#6b6558;line-height:1.5;}
+.loc-cta{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap;}
+.btn-agave{background:var(--agave);color:#fff;}
+.btn-agave:hover{background:var(--agave-osc);}
+.btn-mapa{background:#fff;color:var(--negro);border:1.5px solid #ddd5c5;}
+.btn-mapa:hover{border-color:var(--agave);color:var(--agave);}
+.map-wrap{border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(30,25,15,.15);border:1px solid #ece5d8;min-height:420px;}
+.map-wrap iframe{width:100%;height:100%;min-height:420px;border:0;display:block;}
 
-            <article class="service-card">
-              <div class="service-icon">03</div>
-              <h3>Identidad de marca</h3>
-              <p>
-                Sistemas visuales y marcos de mensaje que hacen que tu marca se sienta clara, memorable y confiable.
-              </p>
-            </article>
+/* ── Newsletter ── */
+.newsletter{background:var(--negro);color:#fff;padding:64px 5%;text-align:center;}
+.newsletter h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:12px;}
+.newsletter h2 em{color:var(--dorado);font-style:normal;}
+.newsletter p{color:#bdb5a3;margin-bottom:26px;}
+.news-form{display:flex;max-width:440px;margin:0 auto;}
+.news-form input{flex-grow:1;padding:14px 20px;border:none;border-radius:30px 0 0 30px;font-size:.9rem;outline:none;}
+.news-form button{padding:14px 26px;border:none;border-radius:0 30px 30px 0;background:var(--dorado);color:var(--negro);font-weight:700;cursor:pointer;font-size:.85rem;transition:background .2s;}
+.news-form button:hover{background:#dbb55f;}
 
-            <article class="service-card">
-              <div class="service-icon">04</div>
-              <h3>Contenido social</h3>
-              <p>
-                Plantillas y activos de contenido breve que rompen el scroll y están diseñados para crecer de forma constante.
-              </p>
-            </article>
-          </div>
-        </section>
+/* ── Footer ── */
+.footer{background:#0d0b09;color:#a39b8a;padding:56px 5% 0;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1200px;margin:0 auto;}
+.footer-col h4{color:#fff;font-size:1.05rem;margin-bottom:18px;font-family:'Playfair Display',serif;}
+.footer-col p,.footer-col a{font-size:.88rem;color:#a39b8a;display:block;margin-bottom:10px;line-height:1.6;}
+.footer-col a:hover{color:var(--dorado);}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:14px;}
+.footer-logo span{color:var(--agave);}
+.footer-bottom{border-top:1px solid #26221c;margin-top:48px;padding:22px;text-align:center;font-size:.8rem;color:#6b6355;max-width:1200px;margin-left:auto;margin-right:auto;}
+.socials{display:flex;gap:12px;margin-top:8px;}
+.socials a{width:36px;height:36px;border:1px solid #3a352c;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:all .2s;}
+.socials a:hover{background:var(--dorado);color:var(--negro);border-color:var(--dorado);}
 
-        <section id="video-check" class="video-check" aria-labelledby="video-check-title">
-          <div class="section-heading">
-            <p class="eyebrow">Validador de entrega</p>
-            <h2 id="video-check-title">Comprueba tu video antes de procesarlo.</h2>
-            <p class="section-intro">Aceptamos archivos MP4 de hasta 500 MB. Si el procesamiento falla, puedes intentarlo de nuevo sin volver a seleccionar el archivo.</p>
-          </div>
+/* ── Toast ── */
+.toast{position:fixed;bottom:28px;right:28px;background:var(--negro);color:#fff;padding:14px 22px;border-radius:10px;font-size:.9rem;box-shadow:0 10px 30px rgba(0,0,0,.3);opacity:0;transform:translateY(20px);transition:all .3s;pointer-events:none;z-index:400;border-left:4px solid var(--agave);}
+.toast.show{opacity:1;transform:translateY(0);}
 
-          <div class="upload-panel">
-            <label class="drop-zone" for="video-file">
-              <span class="upload-icon" aria-hidden="true">↑</span>
-              <strong>Selecciona un video MP4</strong>
-              <span>Formato requerido: MP4 · Tamaño máximo: 500 MB</span>
-              <input id="video-file" type="file" accept="video/mp4,.mp4" />
-            </label>
-            <div class="processing-status" aria-live="polite">
-              <span class="status-dot" aria-hidden="true"></span>
-              <span id="file-status">Aún no has seleccionado un archivo.</span>
-            </div>
-            <button class="retry-btn" id="retry-processing" type="button" disabled>
-              <span aria-hidden="true">↻</span>
-              Intentar procesar de nuevo
-            </button>
-          </div>
-        </section>
+/* ── Overlay + Drawer del carrito ── */
+.overlay{position:fixed;inset:0;background:rgba(15,12,8,.55);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .3s;z-index:200;}
+.overlay.open{opacity:1;pointer-events:auto;}
+.cart-drawer{position:fixed;top:0;right:-420px;width:400px;max-width:92vw;height:100vh;background:var(--crema);z-index:300;box-shadow:-20px 0 50px rgba(0,0,0,.25);transition:right .35s cubic-bezier(.32,.72,.35,1);display:flex;flex-direction:column;}
+.cart-drawer.open{right:0;}
+.cart-header{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;background:var(--negro);color:#fff;}
+.cart-header h3{font-family:'Playfair Display',serif;font-size:1.25rem;}
+.cart-header .cart-total-badge{background:var(--dorado);color:var(--negro);border-radius:20px;font-size:.75rem;font-weight:700;padding:3px 10px;margin-left:8px;}
+.cart-close{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;line-height:1;padding:4px 8px;transition:transform .2s,color .2s;}
+.cart-close:hover{color:var(--dorado);transform:rotate(90deg);}
+.ship-progress{padding:16px 24px;background:#fff;border-bottom:1px solid #ece5d8;font-size:.82rem;color:#6b6558;}
+.ship-progress strong{color:var(--agave);}
+.progress-track{height:7px;background:#ece5d8;border-radius:10px;margin-top:8px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--agave),var(--dorado));border-radius:10px;width:0%;transition:width .5s cubic-bezier(.32,.72,.35,1);}
+.cart-items{flex-grow:1;overflow-y:auto;padding:18px 20px;}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--gris);}
+.cart-empty span{font-size:3rem;display:block;margin-bottom:14px;}
+.cart-empty p{font-size:.95rem;line-height:1.6;}
+.cart-item{display:flex;gap:14px;background:#fff;border:1px solid #ece5d8;border-radius:12px;padding:14px;margin-bottom:12px;align-items:center;animation:slideIn .3s ease;}
+@keyframes slideIn{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:translateX(0);}}
+.ci-img{width:42px;height:64px;flex-shrink:0;border-radius:5px;background:linear-gradient(105deg,#6b451f,#96642f 40%,#d3a86a 50%,#96642f 60%,#6b451f);}
+.ci-info{flex-grow:1;min-width:0;}
+.ci-info h5{font-size:.88rem;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ci-info .ci-price{font-size:.85rem;color:var(--dorado);font-weight:700;}
+.ci-qty{display:flex;align-items:center;gap:8px;}
+.qty-btn{width:24px;height:24px;border:1px solid #ddd5c5;background:#fff;border-radius:6px;cursor:pointer;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:all .15s;color:#4a453d;}
+.qty-btn:hover{background:var(--negro);color:#fff;border-color:var(--negro);}
+.ci-qty span{font-size:.9rem;font-weight:700;min-width:16px;text-align:center;}
+.ci-remove{background:none;border:none;color:#c0b8a8;cursor:pointer;font-size:1rem;padding:4px;transition:color .2s;}
+.ci-remove:hover{color:#b33a3a;}
+.cart-footer{background:#fff;border-top:1px solid #ece5d8;padding:20px 24px;}
+.cart-row{display:flex;justify-content:space-between;font-size:.9rem;color:#6b6558;margin-bottom:8px;}
+.cart-row.total{font-size:1.15rem;font-weight:700;color:var(--negro);border-top:1px dashed #ddd5c5;padding-top:10px;margin-top:10px;margin-bottom:16px;}
+.cart-row.total span:last-child{color:var(--agave);}
+.btn-checkout{width:100%;background:var(--agave);color:#fff;border:none;padding:15px;border-radius:30px;font-weight:700;font-size:.9rem;letter-spacing:.5px;cursor:pointer;transition:background .2s,transform .15s;}
+.btn-checkout:hover{background:var(--agave-osc);}
+.btn-checkout:active{transform:scale(.98);}
+.btn-continue{width:100%;background:none;border:none;color:var(--gris);font-size:.83rem;margin-top:12px;cursor:pointer;text-decoration:underline;}
+.btn-continue:hover{color:var(--negro);}
 
-        <section id="work" class="portfolio">
-          <div class="section-heading">
-            <p class="eyebrow">Portafolio</p>
-            <h2>Proyectos que convierten ideas en experiencias memorables.</h2>
-          </div>
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;text-align:center;padding:50px 6%;}
+  .hero p{margin:0 auto 28px;}
+  .hero-cta{justify-content:center;}
+  .hero-bottle{display:none;}
+  .container{flex-direction:column;}
+  .sidebar{width:100%;position:static;}
+  .search-bar{display:none;}
+  .navbar{position:static;}
+  .navbar a{padding:12px 10px;font-size:.78rem;}
+  .location-inner{grid-template-columns:1fr;}
+  .map-wrap{min-height:320px;}
+  .map-wrap iframe{min-height:320px;}
+}
+</style>
+<base target="_blank">
+</head>
+<body>
 
-          <div class="portfolio-layout">
-            <div class="project-gallery">
-              <article class="project-card project-card-wide">
-                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85" alt="Diseño de identidad visual sobre una mesa de trabajo" loading="lazy" />
-                <div class="project-info">
-                  <span>Identidad visual</span>
-                  <strong>Marca con presencia</strong>
-                </div>
-              </article>
-              <article class="project-card">
-                <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=900&q=85" alt="Presentación de estrategia de marca en una pantalla" loading="lazy" />
-                <div class="project-info">
-                  <span>Estrategia digital</span>
-                  <strong>De la idea al impacto</strong>
-                </div>
-              </article>
-              <article class="project-card">
-                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=85" alt="Persona grabando contenido para redes sociales" loading="lazy" />
-                <div class="project-info">
-                  <span>Contenido social</span>
-                  <strong>Historias que conectan</strong>
-                </div>
-              </article>
-            </div>
+<div class="top-bar">🚚 Envío gratis a todo México en pedidos mayores a <strong>$1,500 MXN</strong> · Entrega en CDMX en 24–48 hrs</div>
 
-            <div class="reel-showcase">
-              <div class="reel-heading">
-                <span class="mini-label">Reel principal</span>
-                <strong>Una mirada al proceso creativo</strong>
-              </div>
-              <iframe
-                src="https://www.youtube.com/embed/sMSxypsjXa8"
-                title="Reel principal de Suar Studio"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </section>
-      </main>
+<header class="header">
+  <a href="#" class="logo">AGAVE <span>Y</span> UVAS</a>
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar mezcal, vino, destilado o región...">
+    <button>Buscar</button>
+  </div>
+  <div class="user-actions">
+    <a href="#">👤 <span>Mi Cuenta</span></a>
+    <a id="cartLink">🛒 <span>Carrito</span><span class="cart-badge" id="cartCount">0</span></a>
+  </div>
+</header>
 
-      <footer class="site-footer">
-        <div class="footer-brand">
-          <div class="brand-mark">S</div>
-          <div>
-            <strong>Suar Studio</strong>
-            <span>Creando marcas que dejan huella.</span>
-          </div>
-        </div>
+<nav class="navbar">
+  <a href="#">Mezcales</a>
+  <a href="#">Vinos Mexicanos</a>
+  <a href="#">Destilados</a>
+  <a href="#ubicacion">Visítanos</a>
+  <a href="#">Kits Regalo</a>
+  <a href="#">Ofertas</a>
+</nav>
 
-        <div class="social-links" aria-label="Redes sociales">
-          <a href="https://www.instagram.com/eduar_el_oficial/?__pwa=1" target="_blank" rel="noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
-            <span>Instagram</span>
-          </a>
-          <a href="https://www.tiktok.com/@eduareloficial?_r=1&_t=ZS-9A0Hj3JTdaO" target="_blank" rel="noreferrer" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4c.4 2.4 1.8 3.8 4 4v3.2c-1.5 0-2.8-.4-4-1.2V16a5 5 0 1 1-4.3-5v3.3a1.8 1.8 0 1 0 1.3 1.7V4H15Z"></path></svg>
-            <span>TikTok</span>
-          </a>
-          <a href="https://youtube.com/@eduardosuarez-b3s?si=Q7kMBsC9iXozRu1s" target="_blank" rel="noreferrer" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8.2a2.8 2.8 0 0 0-2-2C17.2 5.7 12 5.7 12 5.7s-5.2 0-7 .5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2.5 12 29 29 0 0 0 3 15.8a2.8 2.8 0 0 0 2 2c1.8.5 7 .5 7 .5s5.2 0 7-.5a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .5-3.8 29 29 0 0 0-.5-3.8Z"></path><path class="icon-fill" d="m10 15.2 4.5-3.2L10 8.8v6.4Z"></path></svg>
-            <span>YouTube</span>
-          </a>
-          <a href="https://www.facebook.com/share/1FVLsjbs2D/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5c-.5-.1-1.7-.2-3.1-.2-3.1 0-5.2 1.9-5.2 5.4V12H5.3v3.9h3.4V22H13v-6.1h3.4L17 12h-4V10c0-1.1.3-2 1-2Z"></path></svg>
-            <span>Facebook</span>
-          </a>
-        </div>
-      </footer>
+<section class="hero">
+  <div>
+    <span class="badge">Selección curada · Hecho en México</span>
+    <h1>Todo México<br>en una <em>botella</em></h1>
+    <p>Mezcales artesanales de palenques familiares y vinos premiados del Valle de Guadalupe. Cada botella cuenta la historia de su tierra, su agave y su gente.</p>
+    <div class="hero-cta">
+      <a href="#catalogo" class="btn btn-amarillo">Explorar catálogo →</a>
+      <a href="#ubicacion" class="btn btn-outline">📍 Visitar tienda</a>
     </div>
-    <script>
-      const videoInput = document.querySelector("#video-file");
-      const fileStatus = document.querySelector("#file-status");
-      const retryButton = document.querySelector("#retry-processing");
-      const dropZone = document.querySelector(".drop-zone");
-      const maxFileSize = 500 * 1024 * 1024;
-      let selectedFile = null;
+  </div>
+  <div class="hero-bottle" aria-hidden="true"></div>
+</section>
 
-      function validateVideo(file) {
-        if (!file) {
-          return "Selecciona un archivo para comenzar.";
-        }
-        if (file.size === 0) {
-          return "El archivo está vacío. Elige otro video.";
-        }
-        if (file.size > maxFileSize) {
-          return "El video supera el límite de 500 MB.";
-        }
-        if (file.type !== "video/mp4" && !file.name.toLowerCase().endsWith(".mp4")) {
-          return "Formato no compatible. Solo se aceptan archivos MP4.";
-        }
-        return "valid";
-      }
+<div class="trust">
+  <div><span>🚚</span> Envío seguro a toda la República</div>
+  <div><span>🛡️</span> Compra protegida</div>
+  <div><span>🎁</span> Empaque de regalo gratis</div>
+  <div><span>💳</span> Paga a meses sin intereses</div>
+</div>
 
-      function setStatus(message, state) {
-        fileStatus.textContent = message;
-        dropZone.dataset.state = state;
-      }
+<div class="container" id="catalogo">
 
-      function processVideo() {
-        const validation = validateVideo(selectedFile);
-        if (validation !== "valid") {
-          setStatus(validation, "error");
-          retryButton.disabled = true;
-          return;
-        }
+  <aside class="sidebar">
+    <h3>Filtrar</h3>
+    <div class="filter-group">
+      <h4>Categoría</h4>
+      <label><input type="checkbox"> Mezcal Artesanal <span class="count">42</span></label>
+      <label><input type="checkbox"> Vino Tinto <span class="count">38</span></label>
+      <label><input type="checkbox"> Vino Blanco <span class="count">24</span></label>
+      <label><input type="checkbox"> Tequila <span class="count">15</span></label>
+    </div>
+    <div class="filter-group">
+      <h4>Variedad</h4>
+      <label><input type="checkbox"> Espadín <span class="count">18</span></label>
+      <label><input type="checkbox"> Tobalá <span class="count">12</span></label>
+      <label><input type="checkbox"> Tepeztate <span class="count">7</span></label>
+      <label><input type="checkbox"> Tempranillo <span class="count">14</span></label>
+    </div>
+    <div class="filter-group">
+      <h4>Región</h4>
+      <label><input type="checkbox"> Oaxaca</label>
+      <label><input type="checkbox"> Valle de Guadalupe, B.C.</label>
+      <label><input type="checkbox"> Michoacán</label>
+      <label><input type="checkbox"> Parras, Coah.</label>
+    </div>
+    <div class="filter-group">
+      <h4>Precio</h4>
+      <label><input type="radio" name="precio"> Menos de $500</label>
+      <label><input type="radio" name="precio"> $500 – $1,000</label>
+      <label><input type="radio" name="precio"> Más de $1,000</label>
+    </div>
+  </aside>
 
-        retryButton.disabled = true;
-        setStatus("Procesando el video...", "processing");
-        window.setTimeout(() => {
-          setStatus(`Archivo listo para la plataforma: ${selectedFile.name}`, "success");
-          retryButton.disabled = false;
-        }, 900);
-      }
+  <main class="product-list">
+    <div class="section-head">
+      <h2>Destilados de México</h2>
+      <div class="sort">
+        <select>
+          <option>Más vendidos</option>
+          <option>Precio: menor a mayor</option>
+          <option>Precio: mayor a menor</option>
+          <option>Calificación</option>
+        </select>
+      </div>
+    </div>
+    <div class="breadcrumb"><a href="#">Inicio</a> / <a href="#">Destilados</a> / Todos los mezcales y vinos</div>
 
-      videoInput.addEventListener("change", () => {
-        selectedFile = videoInput.files[0] || null;
-        const validation = validateVideo(selectedFile);
-        if (validation !== "valid") {
-          setStatus(validation, "error");
-          retryButton.disabled = true;
-          return;
-        }
-        setStatus(`${selectedFile.name} cumple los requisitos.`, "success");
-        retryButton.disabled = false;
-      });
+    <div class="products">
 
-      retryButton.addEventListener("click", processVideo);
-    </script>
-  </body>
+      <div class="product-card">
+        <span class="tag tag-rec">Recomendado</span>
+        <div class="product-img"></div>
+        <div class="product-title">Mezcal Silvestre Tobalá</div>
+        <div class="stars">★★★★★ <small>(128)</small></div>
+        <div class="product-origin">Palenque local, Oaxaca<br>100% Agave potatorum</div>
+        <div class="product-price" data-price="980">$980.00</div>
+        <button class="btn-add" data-name="Mezcal Silvestre Tobalá" data-price="980">AÑADIR AL CARRITO</button>
+      </div>
+
+      <div class="product-card">
+        <span class="tag tag-new">Nuevo</span>
+        <div class="product-img"></div>
+        <div class="product-title">Vino Tinto Ensenada Reserva</div>
+        <div class="stars">★★★★☆ <small>(86)</small></div>
+        <div class="product-origin">Valle de Guadalupe, B.C.<br>Tempranillo / Cabernet</div>
+        <div class="product-price" data-price="650">$650.00</div>
+        <button class="btn-add" data-name="Vino Tinto Ensenada Reserva" data-price="650">AÑADIR AL CARRITO</button>
+      </div>
+
+      <div class="product-card wide">
+        <span class="tag tag-rec">Recomendado</span>
+        <div class="product-img"></div>
+        <div class="product-title">Kit Regalo: Experiencia Mezcalera</div>
+        <div class="stars">★★★★★ <small>(54)</small></div>
+        <div class="product-origin">Incluye Espadín joven, sal de gusano y 2 vasos veladora</div>
+        <div class="product-price" data-price="1350">$1,350.00</div>
+        <button class="btn-add" data-name="Kit Regalo: Experiencia Mezcalera" data-price="1350">AÑADIR AL CARRITO</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-title">Mezcal Espadín Joven</div>
+        <div class="stars">★★★★☆ <small>(203)</small></div>
+        <div class="product-origin">Matatlán, Oaxaca<br>100% Agave angustifolia</div>
+        <div class="product-price" data-price="620">$620.00</div>
+        <button class="btn-add" data-name="Mezcal Espadín Joven" data-price="620">AÑADIR AL CARRITO</button>
+      </div>
+
+      <div class="product-card">
+        <span class="tag tag-off">-10%</span>
+        <div class="product-img"></div>
+        <div class="product-title">Vino Blanco Chenin Blanc</div>
+        <div class="stars">★★★★☆ <small>(67)</small></div>
+        <div class="product-origin">Parras, Coahuila<br>Cosecha 2023</div>
+        <div class="product-price" data-price="540">$540.00</div>
+        <button class="btn-add" data-name="Vino Blanco Chenin Blanc" data-price="540">AÑADIR AL CARRITO</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-title">Mezcal Ensamble Artesanal</div>
+        <div class="stars">★★★★★ <small>(91)</small></div>
+        <div class="product-origin">Michoacán<br>Cupreata / Inaequidens</div>
+        <div class="product-price" data-price="1100">$1,100.00</div>
+        <button class="btn-add" data-name="Mezcal Ensamble Artesanal" data-price="1100">AÑADIR AL CARRITO</button>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- ══ UBICACIÓN CON GOOGLE MAPS ══ -->
+<section class="location" id="ubicacion">
+  <div class="location-inner">
+    <div class="location-info">
+      <h2>Visítanos en <em>Narvarte</em></h2>
+      <p>Te esperamos en nuestra tienda-boutique para que descubras, pruebes y te lleves un pedacito de México. Prueba nuestros destilados en catas guiadas o elige tu botella favorita con ayuda de nuestros sommeliers.</p>
+      <div class="loc-item">
+        <div class="loc-icon">📍</div>
+        <div>
+          <h4>Dirección</h4>
+          <p>Tajín 393, Narvarte Oriente,<br>Benito Juárez, 03020 Ciudad de México</p>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">🕐</div>
+        <div>
+          <h4>Horario</h4>
+          <p>Lunes a sábado: 11:00 – 20:00 hrs<br>Domingo: 11:00 – 18:00 hrs</p>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">💬</div>
+        <div>
+          <h4>Contacto</h4>
+          <p>WhatsApp: 55 1234 5678<br>hola@agaveyuvas.mx</p>
+        </div>
+      </div>
+      <div class="loc-cta">
+        <a class="btn btn-agave" href="https://www.google.com/maps/dir/?api=1&destination=Taj%C3%ADn+393+Narvarte+Oriente+Benito+Ju%C3%A1rez+Ciudad+de+M%C3%A9xico" target="_blank" rel="noopener">🧭 Cómo llegar</a>
+        <a class="btn btn-mapa" href="https://www.google.com/maps/search/?api=1&query=Taj%C3%ADn+393+Narvarte+Oriente+Ciudad+de+M%C3%A9xico" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=Taj%C3%ADn%20393%2C%20Narvarte%20Oriente%2C%20Benito%20Ju%C3%A1rez%2C%2003020%20Ciudad%20de%20M%C3%A9xico&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación Agave y Uvas - Tajín 393, Narvarte Oriente, CDMX"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Únete al <em>Círculo del Agave</em></h2>
+  <p>Recibe lanzamientos exclusivos, invitaciones a catas y 10% en tu primer pedido.</p>
+  <form class="news-form" onsubmit="event.preventDefault();toast('¡Gracias por suscribirte! 🥃');">
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <button>SUSCRIBIRME</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">AGAVE <span>Y</span> UVAS</div>
+      <p>📍 Tajín 393, Narvarte Oriente,<br>Ciudad de México.</p>
+      <p><i>Todo México en una botella.</i></p>
+      <div class="socials">
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+        <a href="#" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Atención al cliente</h4>
+      <a href="#">Contacto y WhatsApp</a>
+      <a href="#">Preguntas frecuentes</a>
+      <a href="#">Envíos y devoluciones</a>
+      <a href="#">Términos y privacidad</a>
+    </div>
+    <div class="footer-col">
+      <h4>Descubre</h4>
+      <a href="#ubicacion">Visítanos en tienda</a>
+      <a href="#">Próximos bazares</a>
+      <a href="#">Nuestra historia</a>
+      <a href="#">Productores aliados</a>
+    </div>
+    <div class="footer-col">
+      <h4>Horario de tienda</h4>
+      <p>Lun – Sáb: 11:00 – 20:00 hrs</p>
+      <p>Domingo: 11:00 – 18:00 hrs</p>
+      <p>🚚 Entrega CDMX: 24–48 hrs</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Agave y Uvas. Consume responsablemente. Venta exclusiva a mayores de 18 años.</div>
+</footer>
+
+<!-- ══ CARRITO DRAWER ══ -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <h3>Tu Carrito <span class="cart-total-badge" id="drawerCount">0</span></h3>
+    <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+  </div>
+
+  <div class="ship-progress" id="shipProgress">
+    <span id="shipMsg">Te faltan <strong>$1,500.00</strong> para envío gratis 🚚</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+    <div class="cart-row"><span>Envío</span><span id="shipping">—</span></div>
+    <div class="cart-row total"><span>Total</span><span id="grandTotal">$0.00</span></div>
+    <button class="btn-checkout" id="btnCheckout">FINALIZAR COMPRA →</button>
+    <button class="btn-continue" id="btnContinue">o seguir comprando</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ═══════════ LÓGICA DEL CARRITO ═══════════ */
+const FREE_SHIP = 1500;
+let cart = {}; // { nombre: {name, price, qty} }
+
+const cartCount     = document.getElementById('cartCount');
+const drawerCount   = document.getElementById('drawerCount');
+const cartDrawer    = document.getElementById('cartDrawer');
+const overlay       = document.getElementById('overlay');
+const cartItemsEl   = document.getElementById('cartItems');
+const cartFooter    = document.getElementById('cartFooter');
+const subtotalEl    = document.getElementById('subtotal');
+const shippingEl    = document.getElementById('shipping');
+const grandTotalEl  = document.getElementById('grandTotal');
+const shipMsg       = document.getElementById('shipMsg');
+const progressFill  = document.getElementById('progressFill');
+
+const fmt = n => '$' + n.toLocaleString('es-MX', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._to);
+  t._to = setTimeout(function(){ t.classList.remove('show'); }, 2200);
+}
+
+function cartTotals(){
+  let items = 0, subtotal = 0;
+  for (const key in cart){ items += cart[key].qty; subtotal += cart[key].qty * cart[key].price; }
+  return {items, subtotal};
+}
+
+function renderCart(){
+  const {items, subtotal} = cartTotals();
+
+  cartCount.textContent = items;
+  drawerCount.textContent = items;
+  cartCount.style.transform = 'scale(1.4)';
+  setTimeout(function(){ cartCount.style.transform = 'scale(1)'; }, 200);
+
+  /* barra de envío gratis */
+  const pct = Math.min(100, (subtotal / FREE_SHIP) * 100);
+  progressFill.style.width = pct + '%';
+  if (subtotal >= FREE_SHIP){
+    shipMsg.innerHTML = '🎉 <strong>¡Tienes envío gratis!</strong>';
+  } else {
+    shipMsg.innerHTML = 'Te faltan <strong>' + fmt(FREE_SHIP - subtotal) + '</strong> para envío gratis 🚚';
+  }
+
+  /* items */
+  if (items === 0){
+    cartItemsEl.innerHTML =
+      '<div class="cart-empty"><span>🛒</span><p>Tu carrito está vacío.<br>Descubre nuestros mezcales y vinos mexicanos.</p></div>';
+    cartFooter.style.display = 'none';
+    return;
+  }
+  cartFooter.style.display = 'block';
+
+  let html = '';
+  for (const key in cart){
+    const it = cart[key];
+    html +=
+      '<div class="cart-item">' +
+        '<div class="ci-img"></div>' +
+        '<div class="ci-info">' +
+          '<h5>' + it.name + '</h5>' +
+          '<div class="ci-price">' + fmt(it.price) + '</div>' +
+        '</div>' +
+        '<div class="ci-qty">' +
+          '<button class="qty-btn" onclick="changeQty(\'' + key + '\',-1)">−</button>' +
+          '<span>' + it.qty + '</span>' +
+          '<button class="qty-btn" onclick="changeQty(\'' + key + '\',1)">+</button>' +
+        '</div>' +
+        '<button class="ci-remove" onclick="removeItem(\'' + key + '\')" title="Quitar">🗑</button>' +
+      '</div>';
+  }
+  cartItemsEl.innerHTML = html;
+
+  /* totales */
+  const shipping = subtotal >= FREE_SHIP ? 0 : 99;
+  subtotalEl.textContent   = fmt(subtotal);
+  shippingEl.textContent   = shipping === 0 ? 'Gratis 🎉' : fmt(shipping);
+  shippingEl.style.color   = shipping === 0 ? 'var(--agave)' : '#6b6558';
+  grandTotalEl.textContent = fmt(subtotal + shipping);
+}
+
+function changeQty(key, delta){
+  if (!cart[key]) return;
+  cart[key].qty += delta;
+  if (cart[key].qty <= 0) delete cart[key];
+  renderCart();
+}
+
+function removeItem(key){
+  const name = cart[key].name;
+  delete cart[key];
+  renderCart();
+  toast('"' + name + '" eliminado del carrito');
+}
+
+/* agregar productos */
+document.querySelectorAll('.btn-add').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    if (cart[name]) cart[name].qty++;
+    else cart[name] = {name: name, price: price, qty: 1};
+    renderCart();
+    toast('✓ "' + name + '" agregado al carrito');
+    openCart();
+  });
+});
+
+/* abrir / cerrar drawer */
+function openCart(){
+  cartDrawer.classList.add('open');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart(){
+  cartDrawer.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('cartLink').addEventListener('click', openCart);
+document.getElementById('cartClose').addEventListener('click', closeCart);
+document.getElementById('btnContinue').addEventListener('click', closeCart);
+overlay.addEventListener('click', closeCart);
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeCart(); });
+
+/* checkout simulado */
+document.getElementById('btnCheckout').addEventListener('click', function(){
+  const {subtotal} = cartTotals();
+  const shipping = subtotal >= FREE_SHIP ? 0 : 99;
+  const total = subtotal + shipping;
+  const count = cartTotals().items;
+  cart = {};
+  renderCart();
+  closeCart();
+  toast('🎉 ¡Pedido de ' + fmt(total) + ' confirmado! (' + count + ' productos). Gracias por tu compra.');
+});
+
+renderCart();
+</script>
+
+</body>
 </html>
